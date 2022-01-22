@@ -29,19 +29,6 @@
       // User is signed out
       //document.getElementById("user_div").style.display = "none";
       //document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
-//document.getElementById("user_div").style.display = "none";
 
       document.getElementById("login_div").style.display = "block";
       // ...
