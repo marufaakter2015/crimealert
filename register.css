@@ -1,0 +1,30 @@
+h1{
+    margin-left: 42%;
+    color: blue;
+  }
+  a{
+    text-decoration: none;
+  }
+   .wrapper{
+     width: 400px;
+     max-width: 90%;
+     margin: 0 auto;
+   }
+  .wrapper label{
+    display:block;
+    margin:0.5em 0 ;
+  }
+   
+  .wrapper label input{
+    font-size: 18px;
+    padding: 0.5em;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .wrapper input[type="submit"]{
+    font-size: 25px;
+    color: blue;
+    margin-left: 43%;
+    border-radius: 8px;
+  }
