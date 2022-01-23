@@ -18,9 +18,9 @@
 
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
-      document.getElementById("user_div").style.display = "block";
+      document.getElementById("user_div").style.display = "initial";
 
-     // document.getElementById("login_div").style.display = "none";
+      document.getElementById("login_div").style.display = "block";
       // User is signed in, see docs for a list of available properties
       // https://firebase.google.com/docs/reference/js/firebase.User
       var uid = user.uid;
@@ -28,9 +28,9 @@
     } else {
       // User is signed out
       //document.getElementById("user_div").style.display = "none";
-      //document.getElementById("user_div").style.display = "none";
+      document.getElementById("user_div").style.display = "none";
 
-      document.getElementById("login_div").style.display = "block";
+      document.getElementById("login_div").style.display = "initial";
       // ...
     }
   });
@@ -56,18 +56,8 @@
 
   });
   }
-  
 
-// const wrapper = document.querySelector('.wrapper'),
-// form = wrapper.querySelectorAll('.form'),
-// submitInput = form[0].querySelector('input[type = "submit"');
-// function getDataForm(e){
-//     e.preventDefault();
-//     var formData = new FormData(form[0]);
-//     console.log(formData.get('nameField') + '-' + formData.get('emailField') + '-' + formData.get('passwordField'));
-// }
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     submitInput.addEventListener('click', getDataForm, false);
-// },false);
-
+function Redirect()
+{
+  window.location = "http://127.0.0.1:5500/crimealert/welcome.html";
+}
