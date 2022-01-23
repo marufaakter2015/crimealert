@@ -46,7 +46,7 @@
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-
+    window.location = "http://127.0.0.1:5500/crimealert/welcome.html";
     // ...
   })
   .catch((error) => {
@@ -57,7 +57,7 @@
   });
   }
 
-function Redirect()
-{
-  window.location = "http://127.0.0.1:5500/crimealert/welcome.html";
-}
+// function Redirect()
+// {
+//   window.location = "http://127.0.0.1:5500/crimealert/welcome.html";
+// }
