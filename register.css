@@ -22,9 +22,23 @@ h1{
     border-radius: 5px;
   }
   
-  .wrapper input[type="submit"]{
+  .wrapper button[type="submit"]{
     font-size: 25px;
-    color: blue;
+    background-color: green;
     margin-left: 43%;
-    border-radius: 8px;
+    color:white;
+    border-radius: 4px;
+    padding: 6px;
   }
+  button[type=submit]:hover{
+    background-color:#003314 ;
+  }
+
+  #r_message{
+    background-color:  #00FF00;
+     text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10px;
+  }
+  

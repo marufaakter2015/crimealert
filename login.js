@@ -1,20 +1,3 @@
-// firebase.auth().onAuthStateChanged((user) => {
-//     if (user) {
-//       // User is signed in, see docs for a list of available properties
-//       // https://firebase.google.com/docs/reference/js/firebase.User
-//       var uid = user.uid;
-//       // ...
-//     } else {
-//       // User is signed out
-//       // ...
-//     }
-//   });
-
-  //  function login(){
-  //    var useremail = document.getelementbyid("email_field").value;
-  //   var userpassword = document.getelementbyid("password_field").value;
-
-  // }
 
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -46,18 +29,16 @@
   .then((userCredential) => {
     // Signed in
     var user = userCredential.user;
-    window.location = "http://127.0.0.1:5500/crimealert/welcome.html";
+    window.location = "http://127.0.0.1:5500/welcome.html";
     // ...
   })
   .catch((error) => {
     var errorCode = error.code;
     var errorMessage = error.message;
-    window.alert("Error : " + errorMessage);
+    //window.alert("Error : " + errorMessage);
+   // document.write("Error : " + errorMessage);
+    document.getElementById("error_msg").innerHTML = "Error : " +errorMessage;
 
   });
   }
 
-// function Redirect()
-// {
-//   window.location = "http://127.0.0.1:5500/crimealert/welcome.html";
-// }
