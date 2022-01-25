@@ -26,7 +26,7 @@
     </ul>
   </nav>
 
-  <h2 id="welcome">Welcome to our website.</h2>
+  <h2 id="welcome">Welcome <span id="userEmailSpan"></span> to our website.</h2>
 
  
   <div id="pac-container" >
@@ -126,7 +126,14 @@ addMarker({lat:22.723406,lng: 89.075127});
 
 
 </div>
-<script src="login.js"></script>
+
+<script>
+  let userEmail = localStorage.getItem('userEmail');
+  let userEmailSpan = document.getElementById('userEmailSpan');
+  console.log(userEmailSpan);
+  userEmailSpan.innerHTML =userEmail;
+</script>
+
 </body>
 
 </html>

@@ -28,7 +28,8 @@
     firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
   .then((userCredential) => {
     // Signed in
-    var user = userCredential.user;
+    var user = userCredential;
+    localStorage.setItem('userEmail', userEmail);
     window.location = "http://127.0.0.1:5500/welcome.html";
     // ...
   })
