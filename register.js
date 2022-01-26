@@ -62,12 +62,15 @@ submitButton.addEventListener("click", (e) => {
             // Signed in 
             var user = userCredential.user;
             console.log(user);
+             window.location = "http://127.0.0.1:5500/login.html";
+
             // ...
         })
         .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
-            // ..
+           // window.alert("Error : " + errorMessage);
+    document.getElementById("user_message").innerHTML = "Error : " +errorMessage;
         });
 
 })
