@@ -1,17 +1,3 @@
-// const wrapper = document.querySelector('.wrapper'),
-// form = wrapper.querySelectorAll('.form'),
-// submitInput = form[0].querySelector('input[type = "submit"');
-// function getDataForm(e){
-//     e.preventDefault();
-//     var formData = new FormData(form[0]);
-//     console.log(formData.get('nameField') + '-' + formData.get('emailField') + '-' + formData.get('passwordField'));
-// }
-
-// document.addEventListener('DOMContentLoaded', function(){
-//     submitInput.addEventListener('click', getDataForm, false);
-// },false);
-
-
 var firebaseConfig = {
     apiKey: "AIzaSyAq9Oul7spdjS4e9GlDLKmxqhrZeL-xgM8",
     authDomain: "arboreal-parser-336914.firebaseapp.com",
@@ -24,10 +10,7 @@ var firebaseConfig = {
 
 //initializr firebase
 firebase.initializeApp(firebaseConfig);
-// var firestore = firebase.firestore()
 
-//variable to access database collection
-// const db = firestore.collection("registrationFormData");
 
 //get submit form
 let submitButton = document.getElementById("submit");
@@ -43,34 +26,33 @@ submitButton.addEventListener("click", (e) => {
     let passwordField = document.getElementById('password').value;
     let passwordVerifyField = document.getElementById('passwordVerify').value;
 
-    //save form data to firebase
-    // db.doc().set({
-    //     name: nameField,
-    //     email: emailField,
-    //     password: passwordField,
-    //     passwordVerify: passwordVerifyField
-    // }).then( () =>{
-    //     window.location = "http://127.0.0.1:5500/login.html";
-    //     //document.getElementById("r_message").innerHTML = "Registration Complete";
-    //    // console.log("Registration Complete")
-    // }).catch((error) =>{
-    //     console.log(error)
-    // })
-
-    firebase.auth().createUserWithEmailAndPassword(emailField, passwordField)
+console.log(passwordField,passwordVerifyField);
+    let message = document.getElementById("message");
+    if(passwordField.length != 0){
+      if(passwordField == passwordVerifyField){
+        firebase.auth().createUserWithEmailAndPassword(emailField, passwordField)
         .then((userCredential) => {
             // Signed in 
             var user = userCredential.user;
             console.log(user);
-             window.location = "http://127.0.0.1:5500/login.html";
-
-            // ...
+       
+    window.location = "http://127.0.0.1:5500/login.html";
         })
         .catch((error) => {
             var errorCode = error.code;
             var errorMessage = error.message;
-           // window.alert("Error : " + errorMessage);
-    document.getElementById("user_message").innerHTML = "Error : " +errorMessage;
+        document.getElementById("user_message").innerHTML = "Error : " +errorMessage;
         });
+        }
+        else{
+            message.textContent = "Password don`t match";
+            message.style.color = "#ff4d4d";
+    
+        }
+    }
+    else{
+        message.textContent = "Password can`t be empty!"
+    }
 
-})
+})    
+
