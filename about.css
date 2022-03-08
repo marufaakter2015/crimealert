@@ -1,0 +1,41 @@
+*{
+    padding:0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+ .background_image {
+    background-image: url("/friend.jpeg");
+    background-color: gray;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+   
+    height: 90vh;
+    background-size: cover;
+    position: relative;
+  } 
+
+  /* .background_image{
+      background-image: url("/friend.jpeg");
+      background-color:#cccccc ;
+      height: 413px;
+      width: 780px;
+      margin-top: 90px;
+      
+  } */
+  
+  .text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-color: #CAFFE8;
+    padding: 30px;
+    border-radius: 10px;
+    opacity: 0.8;
+  } 
